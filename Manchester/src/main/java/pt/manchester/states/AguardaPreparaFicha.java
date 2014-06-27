@@ -1,6 +1,6 @@
 package pt.manchester.states;
 
-import logic.Triagem;
+import pt.manchester.logic.Triagem;
 
 public class AguardaPreparaFicha extends EstadosAdapter{
 

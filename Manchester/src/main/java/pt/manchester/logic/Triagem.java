@@ -1,4 +1,4 @@
-package logic;
+package pt.manchester.logic;
 
 import pt.manchester.states.IEstados;
 
