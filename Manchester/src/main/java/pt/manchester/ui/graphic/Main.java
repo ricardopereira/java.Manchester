@@ -1,5 +1,7 @@
 package pt.manchester.ui.graphic;
 
+import logic.Triagem;
+
 public class Main {
 	
     public static final void main(String[] args) {
@@ -8,7 +10,7 @@ public class Main {
     }
 
 	private static void start() {
-        DataController controller = new DataController();
+        DataController controller = new DataController(new Triagem());
         new FrameMain(controller);
     }
 

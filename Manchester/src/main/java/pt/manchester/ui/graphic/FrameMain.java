@@ -1,7 +1,9 @@
 package pt.manchester.ui.graphic;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.KeyEvent;
 import java.util.Observable;
@@ -15,7 +17,7 @@ import javax.swing.JPanel;
 
 public class FrameMain extends JFrame implements Observer {
 
-    private DataController controller;
+    private DataController ctrl;
     private Container mainContainer;
     
     // Componentes
@@ -24,20 +26,21 @@ public class FrameMain extends JFrame implements Observer {
     private JMenuItem menuItemSobre;
     
     // Paineis
-    private JPanel panelPrincipal;
+    private PanelPrincipal panelPrincipal;
+    private PanelInformacao panelInformacao;
     
     private static Font typo = new Font("Verdana", Font.PLAIN, 12);
     
-    public FrameMain(DataController controller)
+    public FrameMain(DataController ctrl)
     {
-        this(controller, 150, 0, 900, 650);
+        this(ctrl, 150, 0, 900, 650);
     }
     
-    public FrameMain(DataController controller, int x, int y, int width, int height)
+    public FrameMain(DataController ctrl, int x, int y, int width, int height)
     {
     	// Cabeçalho
         super("Triagem de Manchester");
-        this.controller = controller;
+        this.ctrl = ctrl;
         
         mainContainer = getContentPane();
         
@@ -47,23 +50,24 @@ public class FrameMain extends JFrame implements Observer {
         setLocation(x,y);
         setSize(width, height);
         setVisible(true);
-        setResizable(false);
+        //setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         // READY
-        controller.notifyObservers();
+        ctrl.notifyObservers();
     }
     
     protected void init()
     {
-        controller.init();
+        ctrl.init();
         
         // Zonas
-
+        panelPrincipal = new PanelPrincipal(null,ctrl);
+        panelInformacao = new PanelInformacao(null,ctrl);
         
         // Observers
-        //controller.addObserver(panel);
-
+        ctrl.addObserver(panelPrincipal);
+        ctrl.addObserver(panelInformacao);
         
         // Layout
         createLayout();
@@ -89,6 +93,13 @@ public class FrameMain extends JFrame implements Observer {
         
         Container cp = getContentPane();
         cp.setLayout(new BorderLayout());
+        
+        // Central
+        panelPrincipal.setBackground(Color.RED);
+        cp.add(panelPrincipal,BorderLayout.CENTER);
+        
+        panelInformacao.setBackground(Color.YELLOW);
+        cp.add(panelInformacao,BorderLayout.EAST);
     }
     
     protected void registerListeners()
