@@ -94,11 +94,8 @@ public class FrameMain extends JFrame implements Observer {
         Container cp = getContentPane();
         cp.setLayout(new BorderLayout());
         
-        // Central
-        panelPrincipal.setBackground(Color.RED);
+        // Zonas
         cp.add(panelPrincipal,BorderLayout.CENTER);
-        
-        panelInformacao.setBackground(Color.YELLOW);
         cp.add(panelInformacao,BorderLayout.EAST);
     }
     
