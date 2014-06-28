@@ -5,7 +5,7 @@ import java.awt.Component;
 
 import javax.swing.JPanel;
 
-import logic.Triagem;
+import pt.manchester.logic.*;
 
 public class PanelBase extends JPanel {
 	

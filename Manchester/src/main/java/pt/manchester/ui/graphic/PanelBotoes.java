@@ -12,14 +12,14 @@ public class PanelBotoes extends PanelBase implements Observer {
 	
     public PanelBotoes(PanelBase owner, DataController ctrl) {
         super(owner,ctrl);
-        this.setLayout(new FlowLayout(FlowLayout.LEADING));
-        this.setBackground(new Color(219,219,219));
-        this.setPreferredSize(new Dimension(300,200));
-        this.setMinimumSize(new Dimension(300,200));
-        this.setMaximumSize(new Dimension(300,200));
+        this.setLayout(new FlowLayout(FlowLayout.CENTER));
+        this.setBackground(new Color(198,131,171));
+        this.setPreferredSize(new Dimension(300,38));
+        this.setMinimumSize(new Dimension(300,38));
+        this.setMaximumSize(new Dimension(300,38));
         
-        add(new JButton("<"));
-        add(new JButton(">"));
+        add(new JButton("< anterior"));
+        add(new JButton("seguinte >"));
     }
     
     @Override

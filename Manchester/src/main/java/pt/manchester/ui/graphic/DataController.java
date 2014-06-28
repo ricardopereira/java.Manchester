@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
 
-import logic.Triagem;
+import pt.manchester.logic.Triagem;
 
 public class DataController extends Observable {
 	

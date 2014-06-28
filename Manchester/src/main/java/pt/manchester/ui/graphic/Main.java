@@ -1,6 +1,6 @@
 package pt.manchester.ui.graphic;
 
-import logic.Triagem;
+import pt.manchester.logic.Triagem;
 
 public class Main {
 	

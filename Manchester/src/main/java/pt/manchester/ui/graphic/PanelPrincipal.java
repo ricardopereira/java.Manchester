@@ -23,10 +23,10 @@ public class PanelPrincipal extends PanelBase implements Observer {
         pnlMain.setBackground(this.getBackground());
         add(pnlMain,BorderLayout.CENTER);
         
+        // Teste
         pnlMain.add(new JLabel("Bem-vindo"));
         
         pnlButtons = new PanelBotoes(this,getController());
-        pnlButtons.setBackground(Color.RED);
         add(pnlButtons,BorderLayout.SOUTH);
     }
     

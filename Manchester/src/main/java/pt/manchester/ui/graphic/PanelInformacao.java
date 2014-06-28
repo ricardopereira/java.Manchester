@@ -14,7 +14,7 @@ public class PanelInformacao extends PanelBase implements Observer {
     public PanelInformacao(PanelBase owner, DataController ctrl) {
         super(owner,ctrl);
         this.setLayout(new FlowLayout(FlowLayout.LEADING));
-        this.setBackground(new Color(219,219,219));
+        this.setBackground(new Color(179,90,143));
         this.setPreferredSize(new Dimension(300,500));
         this.setMinimumSize(new Dimension(300,500));
         this.setMaximumSize(new Dimension(300,500));
@@ -26,6 +26,7 @@ public class PanelInformacao extends PanelBase implements Observer {
         
         setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
         
+        // Sem estado
         if (getTriagem().getEstadoActual() == null) {
         	// Mostra histórico
         	for (int i = 0; i < getController().getHistorico().size(); i++) {
