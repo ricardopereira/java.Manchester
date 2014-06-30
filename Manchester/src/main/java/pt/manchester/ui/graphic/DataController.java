@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Observable;
 
 import pt.manchester.logic.Triagem;
+import pt.manchester.states.EstadoListener;
 
 public class DataController extends Observable {
 	
@@ -15,9 +16,18 @@ public class DataController extends Observable {
 	public List<String> getHistorico() {
 		return historico;
 	}
+	
+	final private class updateOnSetEstado implements EstadoListener {
+        @Override
+        public void onSetEstado() {
+            update();
+        }
+    }
 
 	public DataController(Triagem triagem) {
 		this.triagem = triagem;
+		// Ao mudar de estado irá refrescar o ambiente gráfico
+        this.triagem.addListener(new updateOnSetEstado());
 	}
 	
 	protected void init() {
