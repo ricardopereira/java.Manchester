@@ -38,6 +38,7 @@ public class DroolsTest {
     private static KnowledgeBase readKnowledgeBase() throws Exception {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
         kbuilder.add(ResourceFactory.newClassPathResource("Sample.drl"), ResourceType.DRL);
+        kbuilder.add(ResourceFactory.newClassPathResource("RuleAsma.drl"), ResourceType.DRL);
         KnowledgeBuilderErrors errors = kbuilder.getErrors();
         if (errors.size() > 0) {
             for (KnowledgeBuilderError error: errors) {
@@ -54,6 +55,8 @@ public class DroolsTest {
 
         public static final int HELLO = 0;
         public static final int GOODBYE = 1;
+        public static final int RuleAsma = 2;
+        public static final int RuleAsma2 = 3;
 
         private String message;
 

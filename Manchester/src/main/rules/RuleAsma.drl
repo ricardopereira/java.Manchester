@@ -1,0 +1,24 @@
+//created on: Jul 1, 2014
+package RuleAsma
+ 
+import pt.manchester.rules.DroolsTest.Message;
+
+ 
+rule "Rule Asma"
+    when
+        m : Message( status == Message.RuleAsma, myMessage : message )
+    then
+        System.out.println( myMessage );
+        m.setMessage( "Rule Asma2" );
+        m.setStatus( Message.RuleAsma2 );
+        update( m );
+end
+
+rule "Rule Asma2"
+    when
+        Message( status == Message.RuleAsma2, myMessage : message )
+    then
+        System.out.println( myMessage );
+end
+
+
