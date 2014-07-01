@@ -7,10 +7,10 @@ import pt.manchester.logic.Opcoes.Opcao;
 
 public abstract class Area {
 	
-	private ArrayList<Opcao> opcoesVermelhas = new ArrayList<>();
-	private ArrayList<Opcao> opcoesLaranja = new ArrayList<>();
-	private ArrayList<Opcao> opcoesAmarelo = new ArrayList<>();
-	private ArrayList<Opcao> opcoesVerde = new ArrayList<>();
+	private ArrayList<String> opcoesVermelhas = new ArrayList<>();
+	private ArrayList<String> opcoesLaranja = new ArrayList<>();
+	private ArrayList<String> opcoesAmarelo = new ArrayList<>();
+	private ArrayList<String> opcoesVerde = new ArrayList<>();
 	
 	EscalaTriagem escalaActual;
 
@@ -31,35 +31,35 @@ public abstract class Area {
 	protected abstract void preencheAmarelo();
 	protected abstract void preencheVerde();
 
-	public ArrayList<Opcao> getOpcoesVermelhas() {
+	public ArrayList<String> getOpcoesVermelhas() {
 		return opcoesVermelhas;
 	}
 
-	public void setOpcoesVermelhas(ArrayList<Opcao> opcoesVermelhas) {
+	public void setOpcoesVermelhas(ArrayList<String> opcoesVermelhas) {
 		this.opcoesVermelhas = opcoesVermelhas;
 	}
 
-	public ArrayList<Opcao> getOpcoesLaranja() {
+	public ArrayList<String> getOpcoesLaranja() {
 		return opcoesLaranja;
 	}
 
-	public void setOpcoesLaranja(ArrayList<Opcao> opcoesLaranja) {
+	public void setOpcoesLaranja(ArrayList<String> opcoesLaranja) {
 		this.opcoesLaranja = opcoesLaranja;
 	}
 
-	public ArrayList<Opcao> getOpcoesAmarelo() {
+	public ArrayList<String> getOpcoesAmarelo() {
 		return opcoesAmarelo;
 	}
 
-	public void setOpcoesAmarelo(ArrayList<Opcao> opcoesAmarelo) {
+	public void setOpcoesAmarelo(ArrayList<String> opcoesAmarelo) {
 		this.opcoesAmarelo = opcoesAmarelo;
 	}
 
-	public ArrayList<Opcao> getOpcoesVerde() {
+	public ArrayList<String> getOpcoesVerde() {
 		return opcoesVerde;
 	}
 
-	public void setOpcoesVerde(ArrayList<Opcao> opcoesVerde) {
+	public void setOpcoesVerde(ArrayList<String> opcoesVerde) {
 		this.opcoesVerde = opcoesVerde;
 	}
 	
