@@ -10,9 +10,27 @@ public abstract class Area {
 	private ArrayList<Opcao> opcoesLaranja = new ArrayList<>();
 	private ArrayList<Opcao> opcoesAmarelo = new ArrayList<>();
 	private ArrayList<Opcao> opcoesVerde = new ArrayList<>();
+	
+	public enum EscalaTriagem {
+		etSemEscala,
+        etVermelho, //Emergente
+        etLaranja, //Muito urgente
+        etAmarelo, //Urgente
+        etVerde //Pouco urgente
+    }
+	
+	EscalaTriagem escalaActual;
 
 	public Area() {
-		
+		escalaActual = EscalaTriagem.etSemEscala;
+	}
+	
+	public EscalaTriagem getEscalaActual() {
+		return escalaActual;
+	}
+
+	public void setEscalaActual(EscalaTriagem escalaActual) {
+		this.escalaActual = escalaActual;
 	}
 	
 	protected abstract void preencheVermelho();
@@ -51,4 +69,5 @@ public abstract class Area {
 	public void setOpcoesVerde(ArrayList<Opcao> opcoesVerde) {
 		this.opcoesVerde = opcoesVerde;
 	}
+
 }

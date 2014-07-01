@@ -7,9 +7,21 @@ public abstract class Opcao {
     }
 		
 	private String caption;
+	public String getCaption() {
+		return caption;
+	}
+
 	private OpcaoType type;
+	public OpcaoType getType() {
+		return type;
+	}
+
 	private String descricao;
 	
+	public String getDescricao() {
+		return descricao;
+	}
+
 	public Opcao(String caption, OpcaoType type, String descricao) {
 		this.caption = caption;
 		this.type = type;

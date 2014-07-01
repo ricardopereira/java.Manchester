@@ -1,94 +1,53 @@
 <object-stream>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-  <declarations>myMessage=Hello World(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
+  <activationId>Rule Asma - Inicial [1]</activationId>
+  <rule>Rule Asma - Inicial</rule>
+  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>pt.manchester.rules.DroolsTest$Message@4bac96cd</objectToString>
+  <objectToString>pt.manchester.logic.Areas.AreaAsma@7c8b3a91</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-  <declarations>myMessage=Hello World(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
+  <activationId>Rule Asma - Inicial [1]</activationId>
+  <rule>Rule Asma - Inicial</rule>
+  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Goodbye world(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
+  <activationId>Rule Asma - Resultado [1]</activationId>
+  <rule>Rule Asma - Resultado</rule>
+  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>2</type>
   <factId>1</factId>
-  <objectToString>pt.manchester.rules.DroolsTest$Message@4bac96cd</objectToString>
+  <objectToString>pt.manchester.logic.Areas.AreaAsma@7c8b3a91</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Hello World [1]</activationId>
-  <rule>Hello World</rule>
-  <declarations>myMessage=Goodbye world(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
+  <activationId>Rule Asma - Inicial [1]</activationId>
+  <rule>Rule Asma - Inicial</rule>
+  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Goodbye world(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>4</type>
-  <activationId>Rule Asma [1]</activationId>
-  <rule>Rule Asma</rule>
-  <declarations>myMessage=Rule ASMA(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
+  <activationId>Rule Asma - Resultado [1]</activationId>
+  <rule>Rule Asma - Resultado</rule>
+  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
-  <type>2</type>
+  <type>3</type>
   <factId>1</factId>
-  <objectToString>pt.manchester.rules.DroolsTest$Message@4bac96cd</objectToString>
+  <objectToString>pt.manchester.logic.Areas.AreaAsma@7c8b3a91</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>GoodBye [1]</activationId>
-  <rule>GoodBye</rule>
-  <declarations>myMessage=Rule ASMA(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>Rule Asma [1]</activationId>
-  <rule>Rule Asma</rule>
-  <declarations>myMessage=Rule ASMA(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>4</type>
-  <activationId>Rule Asma2 [1]</activationId>
-  <rule>Rule Asma2</rule>
-  <declarations>myMessage=Rule Asma2(1)</declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ObjectLogEvent>
-  <type>2</type>
-  <factId>1</factId>
-  <objectToString>pt.manchester.rules.DroolsTest$Message@4bac96cd</objectToString>
-</org.drools.audit.event.ObjectLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>Rule Asma [1]</activationId>
-  <rule>Rule Asma</rule>
-  <declarations>myMessage=Rule Asma2(1); m=pt.manchester.rules.DroolsTest$Message@4bac96cd(1)</declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>6</type>
-  <activationId>Rule Asma2 [1]</activationId>
-  <rule>Rule Asma2</rule>
-  <declarations>myMessage=Rule Asma2(1)</declarations>
-</org.drools.audit.event.ActivationLogEvent>
-<org.drools.audit.event.ActivationLogEvent>
-  <type>7</type>
-  <activationId>Rule Asma2 [1]</activationId>
-  <rule>Rule Asma2</rule>
-  <declarations>myMessage=Rule Asma2(1)</declarations>
+  <activationId>Rule Asma - Resultado [-1]</activationId>
+  <rule>Rule Asma - Resultado</rule>
+  <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>

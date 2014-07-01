@@ -1,24 +1,40 @@
 //created on: Jul 1, 2014
 package RuleAsma
  
-import pt.manchester.rules.DroolsTest.Message;
+import pt.manchester.logic.Areas.*;
+import pt.manchester.logic.Opcoes.*;
+import java.util.Scanner;
 
- 
-rule "Rule Asma"
+rule "Rule Asma - Inicial"
     when
-        m : Message( status == Message.RuleAsma, myMessage : message )
+        area : AreaAsma(escalaActual == Area.EscalaTriagem.etSemEscala);
     then
-        System.out.println( myMessage );
-        m.setMessage( "Rule Asma2" );
-        m.setStatus( Message.RuleAsma2 );
-        update( m );
+        System.out.println(area.getClass().getSimpleName()+"\n");
+        
+        // O fluxograma inicia sempre do caso mais crítico/emergente para o caso menos urgente        
+        System.out.println("Escolha uma das opções:");
+        int i = 0;
+        for (; i < area.getOpcoesVermelhas().size(); i++)
+        {
+        	System.out.println(i+": "+area.getOpcoesVermelhas().get(i).getCaption() + "?");	
+        }
+        System.out.println(i+": Nenhuma");	        
+        
+        Scanner input = new Scanner(System.in);
+		int opcao = input.nextInt();
+		
+		if (opcao == i)
+			area.setEscalaActual(Area.EscalaTriagem.etVermelho);
+		else 		
+			area.setEscalaActual(Area.EscalaTriagem.etLaranja);
+        
+        update(area);
 end
 
-rule "Rule Asma2"
+rule "Rule Asma - Resultado"
     when
-        Message( status == Message.RuleAsma2, myMessage : message )
+        area : AreaAsma(escalaActual == Area.EscalaTriagem.etVermelho);
     then
-        System.out.println( myMessage );
+    	System.out.println("Triagem efectuada");
+    	retract(area);
 end
-
-
