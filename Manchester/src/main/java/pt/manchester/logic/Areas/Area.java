@@ -3,7 +3,6 @@ package pt.manchester.logic.Areas;
 import java.util.ArrayList;
 
 import pt.manchester.logic.EscalaTriagem;
-import pt.manchester.logic.Opcoes.Opcao;
 
 public abstract class Area {
 	
