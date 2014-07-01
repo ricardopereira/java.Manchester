@@ -2,8 +2,6 @@ package pt.manchester.logic.Areas;
 
 import java.util.ArrayList;
 
-import pt.manchester.logic.Opcoes.*;
-
 public class AreaAsma extends Area {
 	
 	public AreaAsma(){
@@ -17,10 +15,10 @@ public class AreaAsma extends Area {
 
 	@Override
 	protected void preencheVermelho() {
-		ArrayList<Opcao> opcoes = new ArrayList<>();
+		ArrayList<String> opcoes = new ArrayList<>();
 		
-		opcoes.add(new OpcaoCompViaAerea());
-		opcoes.add(new OpcaoRespIneficaz());
+		opcoes.add("Compromisso da via aérea");
+		opcoes.add("Respiração ineficaz");
 		setOpcoesVermelhas(opcoes);
 	}
 

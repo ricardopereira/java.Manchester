@@ -1,6 +1,5 @@
 eclipse.preferences.version=1
-encoding//src/main/java/pt/manchester/logic/Opcoes/OpcaoCompViaAerea.java=UTF-8
-encoding//src/main/java/pt/manchester/logic/Opcoes/OpcaoRespIneficaz.java=UTF-8
+encoding//src/main/java/pt/manchester/logic/Areas/AreaAsma.java=UTF-8
 encoding//src/main/java/pt/manchester/rules/DroolsTest.java=UTF-8
 encoding//src/main/java/pt/manchester/ui/graphic/DataController.java=UTF-8
 encoding//src/main/java/pt/manchester/ui/graphic/FrameMain.java=UTF-8

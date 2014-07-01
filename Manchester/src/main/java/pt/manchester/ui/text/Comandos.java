@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
-import pt.manchester.logic.Opcoes.Opcao;
 
 public class Comandos {
 	private Area area;
@@ -21,7 +20,7 @@ public class Comandos {
         System.out.println(Constantes.textEscolhaOpcao);
         
         int i = 0;
-        ArrayList<Opcao> opcoes = null;
+        ArrayList<String> opcoes = null;
         
         switch (area.getEscalaActual()) {
 		case etSemEscala:
@@ -51,7 +50,7 @@ public class Comandos {
         	else {
                 for (; i < opcoes.size(); i++)
                 {
-                	System.out.println(i+": "+opcoes.get(i).getCaption() + "?");	
+                	System.out.println(i+": "+opcoes.get(i) + "?");	
                 }
                 System.out.println(i+": "+Constantes.textNenhum);
                 
