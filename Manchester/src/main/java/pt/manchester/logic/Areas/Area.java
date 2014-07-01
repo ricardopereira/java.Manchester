@@ -2,6 +2,7 @@ package pt.manchester.logic.Areas;
 
 import java.util.ArrayList;
 
+import pt.manchester.logic.EscalaTriagem;
 import pt.manchester.logic.Opcoes.Opcao;
 
 public abstract class Area {
@@ -10,14 +11,6 @@ public abstract class Area {
 	private ArrayList<Opcao> opcoesLaranja = new ArrayList<>();
 	private ArrayList<Opcao> opcoesAmarelo = new ArrayList<>();
 	private ArrayList<Opcao> opcoesVerde = new ArrayList<>();
-	
-	public enum EscalaTriagem {
-		etSemEscala,
-        etVermelho, //Emergente
-        etLaranja, //Muito urgente
-        etAmarelo, //Urgente
-        etVerde //Pouco urgente
-    }
 	
 	EscalaTriagem escalaActual;
 
@@ -68,6 +61,11 @@ public abstract class Area {
 
 	public void setOpcoesVerde(ArrayList<Opcao> opcoesVerde) {
 		this.opcoesVerde = opcoesVerde;
+	}
+	
+	@Override
+	public String toString() {
+		return getClass().getSimpleName()+": "+getEscalaActual().toString();
 	}
 
 }

@@ -1,53 +1,127 @@
 <object-stream>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>Rule Asma - Inicial [1]</activationId>
-  <rule>Rule Asma - Inicial</rule>
-  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
+  <activationId>Rule Asma - Inicial/Vermelho [1]</activationId>
+  <rule>Rule Asma - Inicial/Vermelho</rule>
+  <declarations>area=AreaAsma: Sem escala(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>1</type>
   <factId>1</factId>
-  <objectToString>pt.manchester.logic.Areas.AreaAsma@7c8b3a91</objectToString>
+  <objectToString>AreaAsma: Sem escala</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Rule Asma - Inicial [1]</activationId>
-  <rule>Rule Asma - Inicial</rule>
-  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
+  <activationId>Rule Asma - Inicial/Vermelho [1]</activationId>
+  <rule>Rule Asma - Inicial/Vermelho</rule>
+  <declarations>area=AreaAsma: Sem escala(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>4</type>
-  <activationId>Rule Asma - Resultado [1]</activationId>
-  <rule>Rule Asma - Resultado</rule>
-  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
+  <activationId>Rule Asma - Laranja [1]</activationId>
+  <rule>Rule Asma - Laranja</rule>
+  <declarations>area=AreaAsma: Laranja(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
   <type>2</type>
   <factId>1</factId>
-  <objectToString>pt.manchester.logic.Areas.AreaAsma@7c8b3a91</objectToString>
+  <objectToString>AreaAsma: Laranja</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Rule Asma - Inicial [1]</activationId>
-  <rule>Rule Asma - Inicial</rule>
-  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
+  <activationId>Rule Asma - Inicial/Vermelho [1]</activationId>
+  <rule>Rule Asma - Inicial/Vermelho</rule>
+  <declarations>area=AreaAsma: Laranja(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>6</type>
-  <activationId>Rule Asma - Resultado [1]</activationId>
-  <rule>Rule Asma - Resultado</rule>
-  <declarations>area=pt.manchester.logic.Areas.AreaAsma@7c8b3a91(1)</declarations>
+  <activationId>Rule Asma - Laranja [1]</activationId>
+  <rule>Rule Asma - Laranja</rule>
+  <declarations>area=AreaAsma: Laranja(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rule Asma - Amarelo [1]</activationId>
+  <rule>Rule Asma - Amarelo</rule>
+  <declarations>area=AreaAsma: Amarelo(1)</declarations>
 </org.drools.audit.event.ActivationLogEvent>
 <org.drools.audit.event.ObjectLogEvent>
-  <type>3</type>
+  <type>2</type>
   <factId>1</factId>
-  <objectToString>pt.manchester.logic.Areas.AreaAsma@7c8b3a91</objectToString>
+  <objectToString>AreaAsma: Amarelo</objectToString>
 </org.drools.audit.event.ObjectLogEvent>
 <org.drools.audit.event.ActivationLogEvent>
   <type>7</type>
-  <activationId>Rule Asma - Resultado [-1]</activationId>
-  <rule>Rule Asma - Resultado</rule>
+  <activationId>Rule Asma - Laranja [1]</activationId>
+  <rule>Rule Asma - Laranja</rule>
+  <declarations>area=AreaAsma: Amarelo(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Rule Asma - Amarelo [1]</activationId>
+  <rule>Rule Asma - Amarelo</rule>
+  <declarations>area=AreaAsma: Amarelo(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Rule Asma - Verde [1]</activationId>
+  <rule>Rule Asma - Verde</rule>
+  <declarations>area=AreaAsma: Verde(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>2</type>
+  <factId>1</factId>
+  <objectToString>AreaAsma: Verde</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Rule Asma - Amarelo [1]</activationId>
+  <rule>Rule Asma - Amarelo</rule>
+  <declarations>area=AreaAsma: Verde(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Rule Asma - Verde [1]</activationId>
+  <rule>Rule Asma - Verde</rule>
+  <declarations>area=AreaAsma: Verde(1)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>4</type>
+  <activationId>Resultado [2]</activationId>
+  <rule>Resultado</rule>
+  <declarations>result=pt.manchester.ui.text.Resultado@137d5b0(2)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>1</type>
+  <factId>2</factId>
+  <objectToString>pt.manchester.ui.text.Resultado@137d5b0</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>1</factId>
+  <objectToString>AreaAsma: Verde</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Rule Asma - Verde [-1]</activationId>
+  <rule>Rule Asma - Verde</rule>
+  <declarations></declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>6</type>
+  <activationId>Resultado [2]</activationId>
+  <rule>Resultado</rule>
+  <declarations>result=pt.manchester.ui.text.Resultado@137d5b0(2)</declarations>
+</org.drools.audit.event.ActivationLogEvent>
+<org.drools.audit.event.ObjectLogEvent>
+  <type>3</type>
+  <factId>2</factId>
+  <objectToString>pt.manchester.ui.text.Resultado@137d5b0</objectToString>
+</org.drools.audit.event.ObjectLogEvent>
+<org.drools.audit.event.ActivationLogEvent>
+  <type>7</type>
+  <activationId>Resultado [-1]</activationId>
+  <rule>Resultado</rule>
   <declarations></declarations>
 </org.drools.audit.event.ActivationLogEvent>
 </object-stream>

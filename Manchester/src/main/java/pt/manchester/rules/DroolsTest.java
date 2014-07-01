@@ -40,6 +40,7 @@ public class DroolsTest {
         KnowledgeBuilder kbuilder = KnowledgeBuilderFactory.newKnowledgeBuilder();
         
         // Lista de regras/áreas
+        kbuilder.add(ResourceFactory.newClassPathResource("Global.drl"), ResourceType.DRL);
         kbuilder.add(ResourceFactory.newClassPathResource("RuleAsma.drl"), ResourceType.DRL);
         
         KnowledgeBuilderErrors errors = kbuilder.getErrors();

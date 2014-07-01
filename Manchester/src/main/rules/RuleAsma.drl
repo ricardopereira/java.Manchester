@@ -1,40 +1,74 @@
-//created on: Jul 1, 2014
 package RuleAsma
- 
-import pt.manchester.logic.Areas.*;
-import pt.manchester.logic.Opcoes.*;
-import java.util.Scanner;
 
-rule "Rule Asma - Inicial"
+import pt.manchester.ui.text.*;
+import pt.manchester.logic.*;
+import pt.manchester.logic.Areas.*;
+
+rule "Rule Asma - Inicial/Vermelho"
     when
-        area : AreaAsma(escalaActual == Area.EscalaTriagem.etSemEscala);
+        area : AreaAsma(escalaActual == EscalaTriagem.etSemEscala);
     then
-        System.out.println(area.getClass().getSimpleName()+"\n");
-        
-        // O fluxograma inicia sempre do caso mais crítico/emergente para o caso menos urgente        
-        System.out.println("Escolha uma das opções:");
-        int i = 0;
-        for (; i < area.getOpcoesVermelhas().size(); i++)
-        {
-        	System.out.println(i+": "+area.getOpcoesVermelhas().get(i).getCaption() + "?");	
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+		if (opcao == opcaoNenhum)
+		{
+            area.setEscalaActual(EscalaTriagem.etLaranja);
+            update(area);
         }
-        System.out.println(i+": Nenhuma");	        
-        
-        Scanner input = new Scanner(System.in);
-		int opcao = input.nextInt();
-		
-		if (opcao == i)
-			area.setEscalaActual(Area.EscalaTriagem.etVermelho);
-		else 		
-			area.setEscalaActual(Area.EscalaTriagem.etLaranja);
-        
-        update(area);
+		else
+		{
+            area.setEscalaActual(EscalaTriagem.etVermelho);
+            insert(new Resultado(area));
+            retract(area);
+        }
 end
 
-rule "Rule Asma - Resultado"
+rule "Rule Asma - Laranja"
     when
-        area : AreaAsma(escalaActual == Area.EscalaTriagem.etVermelho);
+        area : AreaAsma(escalaActual == EscalaTriagem.etLaranja);
     then
-    	System.out.println("Triagem efectuada");
-    	retract(area);
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etAmarelo);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule Asma - Amarelo"
+    when
+        area : AreaAsma(escalaActual == EscalaTriagem.etAmarelo);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etVerde);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule Asma - Verde"
+    when
+        area : AreaAsma(escalaActual == EscalaTriagem.etVerde);
+    then
+	    insert(new Resultado(area));
+	    retract(area);
 end

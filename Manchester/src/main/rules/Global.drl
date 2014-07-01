@@ -1,0 +1,14 @@
+package Global
+
+import pt.manchester.ui.text.*;
+import java.util.Scanner;
+
+rule "Resultado"
+salience 1
+    when
+        result : Resultado();
+    then
+        System.out.println("\nRESULTADO:");
+        System.out.println(result.getArea());
+        retract(result);
+end

@@ -5,4 +5,7 @@ encoding//src/main/java/pt/manchester/rules/DroolsTest.java=UTF-8
 encoding//src/main/java/pt/manchester/ui/graphic/DataController.java=UTF-8
 encoding//src/main/java/pt/manchester/ui/graphic/FrameMain.java=UTF-8
 encoding//src/main/java/pt/manchester/ui/graphic/PanelInformacao.java=UTF-8
+encoding//src/main/java/pt/manchester/ui/text/Comandos.java=UTF-8
+encoding//src/main/java/pt/manchester/ui/text/Constantes.java=UTF-8
+encoding//src/main/rules/Global.drl=UTF-8
 encoding//src/main/rules/RuleAsma.drl=UTF-8
