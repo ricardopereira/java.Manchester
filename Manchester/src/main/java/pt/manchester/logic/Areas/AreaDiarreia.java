@@ -2,9 +2,9 @@ package pt.manchester.logic.Areas;
 					
 import java.util.ArrayList;					
 					
-public class AreaConvulsoes extends Area { 					
+public class AreaDiarreia extends Area { 					
 					
-	public AreaConvulsoes() { 				
+	public AreaDiarreia() { 				
 		super();			
 					
 		preencheVermelho();			
@@ -15,14 +15,11 @@ public class AreaConvulsoes extends Area {
 					
 	@Override				
 	protected void preencheVermelho() {				
-		ArrayList<String> opcoes = new ArrayList<>();			
+		ArrayList<String> opcoes = new ArrayList<>();	
 					
 		opcoes.add("Compromisso da via aérea");			
 		opcoes.add("Respiração ineficaz");			
-		opcoes.add("Criança não reactiva");			
-		opcoes.add("Convulsão actual");			
-		opcoes.add("Choque");			
-		opcoes.add("Hipoglicémia");			
+		opcoes.add("Choque");		
 					
 		setOpcoesVermelhas(opcoes);			
 	}				
@@ -31,13 +28,10 @@ public class AreaConvulsoes extends Area {
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("Alteração do estado de consciência");			
-		opcoes.add("História de sobredosagem ou envenenamento");			
-		opcoes.add("Sinais de meningismo");			
-		opcoes.add("Erupção cutânea desconhecida");			
-		opcoes.add("Púrpura");			
-		opcoes.add("Criança quente");
-		opcoes.add("Adulto muito quente");
+		opcoes.add("Dor severa");			
+		opcoes.add("Hematemeses");			
+		opcoes.add("Hematoquésias, melenas ou rectorragias");			
+		opcoes.add("Alteração do estado de consciência");	
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -46,11 +40,12 @@ public class AreaConvulsoes extends Area {
 	protected void preencheAmarelo() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("História de T.C.E.");			
-		opcoes.add("História inapropriada");			
-		opcoes.add("Sinais neurológicos focais");			
-		opcoes.add("Novos sintomas e/ou sinais neurológicos");			
-		opcoes.add("Quente");		
+		opcoes.add("Dor moderada");			
+		opcoes.add("História significativa de diarreira");			
+		opcoes.add("História de fezes pretas ou ensaguentadas");			
+		opcoes.add("História de hematemeses");			
+		opcoes.add("Sinais de desidratação");			
+		opcoes.add("Vómitos persistentes");			
 					
 		setOpcoesAmarelo(opcoes);			
 	}				
@@ -60,8 +55,7 @@ public class AreaConvulsoes extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
 		opcoes.add("Dor");			
-		opcoes.add("Sub-febril(Febrícula)");			
-		opcoes.add("Cefaleias");		
+		opcoes.add("Vómitos");		
 					
 		setOpcoesVerde(opcoes);			
 	}				
