@@ -49,6 +49,7 @@ public class Main {
 		listAreas.add(AreaCriancaDifLoc.class);
 		listAreas.add(AreaDiabetes.class);
 		listAreas.add(AreaDiarreia.class);
+		listAreas.add(AreaDorAbdominal.class);	
 		listAreas.add(AreaDorCervical.class);
 		listAreas.add(AreaDorGarganta.class);
 		listAreas.add(AreaDorLombar.class);
@@ -59,6 +60,8 @@ public class Main {
 		listAreas.add(AreaGrandeTraumatismo.class);
 		listAreas.add(AreaGravidez.class);
 		listAreas.add(AreaHemorragiaGI.class);
+		listAreas.add(AreaHemorragiaVaginal.class);
+		listAreas.add(AreaIndisposicaoAdulto.class);		
 	}
 	
 	public static void showAreas() {
