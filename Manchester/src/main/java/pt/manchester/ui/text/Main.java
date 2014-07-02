@@ -65,7 +65,9 @@ public class Main {
 		listAreas.add(AreaGravidez.class);
 		listAreas.add(AreaHemorragiaGI.class);
 		listAreas.add(AreaHemorragiaVaginal.class);
-		listAreas.add(AreaIndisposicaoAdulto.class);		
+		listAreas.add(AreaIndisposicaoAdulto.class);
+		listAreas.add(AreaInfecLocaisAbcessos.class);
+		listAreas.add(AreaMordedurasPicadas.class);				
 	}
 	
 	public static void showAreas() {
