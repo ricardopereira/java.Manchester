@@ -49,6 +49,10 @@ public class Main {
 		listAreas.add(AreaCriancaDifLoc.class);
 		listAreas.add(AreaDiabetes.class);
 		listAreas.add(AreaDiarreia.class);
+		listAreas.add(AreaDispneia.class);
+		listAreas.add(AreaDoencaHematologica.class);
+		listAreas.add(AreaDoencaMental.class);
+		listAreas.add(AreaDoencasSexualTransmi.class);
 		listAreas.add(AreaDorCervical.class);
 		listAreas.add(AreaDorGarganta.class);
 		listAreas.add(AreaDorLombar.class);
