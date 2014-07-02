@@ -15,7 +15,7 @@ public class AreaGravidez extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesDorToracica.drl";
+		return "RulesGravidez.drl";
 	}
 					
 	@Override				
@@ -23,7 +23,11 @@ public class AreaGravidez extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 							
 		opcoes.add("Compromisso da via aérea");			
-		opcoes.add("Respiração ineficaz");	
+		opcoes.add("Respiração ineficaz");
+		opcoes.add("Hemorragia exsanguinante");
+		opcoes.add("Apresentação de segmentos fetais");
+		opcoes.add("Prolapso do cordão umbilical");
+		opcoes.add("Convulsão actual");
 		opcoes.add("Choque");		
 					
 		setOpcoesVermelhas(opcoes);			
@@ -34,30 +38,35 @@ public class AreaGravidez extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
 		opcoes.add("Dor severa");			
-		opcoes.add("Dispneia aguda");			
-		opcoes.add("Dor pré-cordial");			
-		opcoes.add("Pulso anormal");			
+		opcoes.add("História de convulsão");
+		opcoes.add("Parto em curso");			
+		opcoes.add("Hemorragia vaginal intensa");
+		opcoes.add("Perda sanguínea em gestaão > 24 semanas");
+		opcoes.add("Alteração do estado de consciência");
 					
 		setOpcoesLaranja(opcoes);			
 	}				
 					
 	@Override				
 	protected void preencheAmarelo() {				
-		ArrayList<String> opcoes = new ArrayList<>();			
+		ArrayList<String> opcoes = new ArrayList<>();
 					
 		opcoes.add("Dor moderada");
-		opcoes.add("Dor pleurítica");
-		opcoes.add("Vómitos persistentes");
+		opcoes.add("Dor que irradia para o ombro");
+		opcoes.add("História inapropriada");
+		opcoes.add("História de traumatismo");
+		opcoes.add("Pressão arterial elevada");
+		opcoes.add("Hemorragia vaginal");
 					
 		setOpcoesAmarelo(opcoes);			
 	}				
 					
 	@Override				
 	protected void preencheVerde() {				
-		ArrayList<String> opcoes = new ArrayList<>();			
+		ArrayList<String> opcoes = new ArrayList<>();
 					
-		opcoes.add("Vómitos");
-		opcoes.add("Problema recente");	
+		opcoes.add("Dor");
+		opcoes.add("Sub-febril (Febrícula)");	
 					
 		setOpcoesVerde(opcoes);			
 	}				

@@ -15,7 +15,7 @@ public class AreaEmbriaguezAparente extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesDorToracica.drl";
+		return "RulesEmbriaguezAparente.drl";
 	}
 					
 	@Override				
@@ -24,7 +24,10 @@ public class AreaEmbriaguezAparente extends Area {
 							
 		opcoes.add("Compromisso da via aérea");			
 		opcoes.add("Respiração ineficaz");	
-		opcoes.add("Choque");		
+		opcoes.add("Criança não reactiva");
+		opcoes.add("Convulsão actual");
+		opcoes.add("Hipoglicémia");
+		opcoes.add("Choque");
 					
 		setOpcoesVermelhas(opcoes);			
 	}				
@@ -33,10 +36,9 @@ public class AreaEmbriaguezAparente extends Area {
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("Dor severa");			
-		opcoes.add("Dispneia aguda");			
-		opcoes.add("Dor pré-cordial");			
-		opcoes.add("Pulso anormal");			
+		opcoes.add("Alteração do estado de consciência não completamente atribuível ao álcool");			
+		opcoes.add("História inadequada");			
+		opcoes.add("Hipotermia");			
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -45,9 +47,10 @@ public class AreaEmbriaguezAparente extends Area {
 	protected void preencheAmarelo() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("Dor moderada");
-		opcoes.add("Dor pleurítica");
-		opcoes.add("Vómitos persistentes");
+		opcoes.add("Alteração do estado de consciência totalmente atribuível ao álcool");
+		opcoes.add("História de perda de consciência");
+		opcoes.add("História inapropriada");
+		opcoes.add("T.C.E.");
 					
 		setOpcoesAmarelo(opcoes);			
 	}				
@@ -56,8 +59,8 @@ public class AreaEmbriaguezAparente extends Area {
 	protected void preencheVerde() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("Vómitos");
-		opcoes.add("Problema recente");	
+		opcoes.add("Dor");
+		opcoes.add("Traumatismo recente");	
 					
 		setOpcoesVerde(opcoes);			
 	}				

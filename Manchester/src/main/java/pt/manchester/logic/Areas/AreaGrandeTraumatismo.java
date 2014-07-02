@@ -15,7 +15,7 @@ public class AreaGrandeTraumatismo extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesDorToracica.drl";
+		return "RulesGrandeTraumatismo.drl";
 	}
 					
 	@Override				
@@ -23,7 +23,9 @@ public class AreaGrandeTraumatismo extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 							
 		opcoes.add("Compromisso da via aérea");			
-		opcoes.add("Respiração ineficaz");	
+		opcoes.add("Respiração ineficaz");
+		opcoes.add("Hemorragia exsanguinante");
+		opcoes.add("Criança não reactiva");
 		opcoes.add("Choque");		
 					
 		setOpcoesVermelhas(opcoes);			
@@ -33,10 +35,12 @@ public class AreaGrandeTraumatismo extends Area {
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("Dor severa");			
+		opcoes.add("Dor severa");
+		opcoes.add("História significativa de incidente");
+		opcoes.add("Mecanismo de lesão");
 		opcoes.add("Dispneia aguda");			
-		opcoes.add("Dor pré-cordial");			
-		opcoes.add("Pulso anormal");			
+		opcoes.add("Grande hemorragia incontrolável");	
+		opcoes.add("Alteração do estado de consciência");
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -46,18 +50,19 @@ public class AreaGrandeTraumatismo extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
 		opcoes.add("Dor moderada");
-		opcoes.add("Dor pleurítica");
-		opcoes.add("Vómitos persistentes");
+		opcoes.add("História clínica significativa");
+		opcoes.add("Pequena hemorragia incontrolável");
+		opcoes.add("História de perda de consciência");
+		opcoes.add("Novos sintomas e/ou sinais neurológicos");
 					
 		setOpcoesAmarelo(opcoes);			
 	}				
 					
 	@Override				
 	protected void preencheVerde() {				
-		ArrayList<String> opcoes = new ArrayList<>();			
+		ArrayList<String> opcoes = new ArrayList<>();
 					
-		opcoes.add("Vómitos");
-		opcoes.add("Problema recente");	
+		// ToDo: Reavaliar!
 					
 		setOpcoesVerde(opcoes);			
 	}				

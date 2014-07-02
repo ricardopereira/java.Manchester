@@ -15,16 +15,16 @@ public class AreaHemorragiaGI extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesDorToracica.drl";
+		return "RulesHemorragiaGI.drl";
 	}
 					
 	@Override				
 	protected void preencheVermelho() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 							
-		opcoes.add("Compromisso da via aérea");			
-		opcoes.add("Respiração ineficaz");	
-		opcoes.add("Choque");		
+		opcoes.add("Compromisso da via aérea");
+		opcoes.add("Respiração ineficaz");
+		opcoes.add("Choque");
 					
 		setOpcoesVermelhas(opcoes);			
 	}				
@@ -34,9 +34,8 @@ public class AreaHemorragiaGI extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
 		opcoes.add("Dor severa");			
-		opcoes.add("Dispneia aguda");			
-		opcoes.add("Dor pré-cordial");			
-		opcoes.add("Pulso anormal");			
+		opcoes.add("Hematemeses");			
+		opcoes.add("Hemtoquésias, melenas ou rectorragias");		
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -46,18 +45,19 @@ public class AreaHemorragiaGI extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
 		opcoes.add("Dor moderada");
-		opcoes.add("Dor pleurítica");
+		opcoes.add("História de fezes pretas ou ensanguentadas");
+		opcoes.add("História de hematemeses");
 		opcoes.add("Vómitos persistentes");
 					
-		setOpcoesAmarelo(opcoes);			
+		setOpcoesAmarelo(opcoes);
 	}				
 					
 	@Override				
-	protected void preencheVerde() {				
-		ArrayList<String> opcoes = new ArrayList<>();			
+	protected void preencheVerde() {
+		ArrayList<String> opcoes = new ArrayList<>();
 					
+		opcoes.add("Dor");	
 		opcoes.add("Vómitos");
-		opcoes.add("Problema recente");	
 					
 		setOpcoesVerde(opcoes);			
 	}				
