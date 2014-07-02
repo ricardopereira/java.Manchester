@@ -16,7 +16,7 @@ public class Comandos {
 	public int showOpcoes() {
         // O fluxograma inicia sempre do caso mais crítico/emergente para o caso menos urgente
 		System.out.println("");
-        System.out.println(area.getClass().getSimpleName()+": "+EscalaTriagem.etVermelho.toString());
+        System.out.println(area.getClass().getSimpleName()+": "+area.getEscalaActual().toString());
         System.out.println(Constantes.textEscolhaOpcao);
         
         int i = 0;
