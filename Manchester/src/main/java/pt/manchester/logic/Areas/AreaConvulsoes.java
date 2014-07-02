@@ -11,7 +11,12 @@ public class AreaConvulsoes extends Area {
 		preencheLaranja();			
 		preencheAmarelo();			
 		preencheVerde();			
-	}				
+	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesConvulsoes.drl";
+	}
 					
 	@Override				
 	protected void preencheVermelho() {				

@@ -12,6 +12,11 @@ public class AreaDorGarganta extends Area {
 		preencheAmarelo();
 		preencheVerde();
 	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesDorGarganta.drl";
+	}
 
 	@Override
 	protected void preencheVermelho() {

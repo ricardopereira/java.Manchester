@@ -11,7 +11,12 @@ public class AreaDorLombar extends Area {
 		preencheLaranja();			
 		preencheAmarelo();			
 		preencheVerde();			
-	}				
+	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesDorLombar.drl";
+	}
 					
 	@Override				
 	protected void preencheVermelho() {				

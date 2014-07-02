@@ -11,7 +11,12 @@ public class AreaCriancaDifLoc extends Area {
 		preencheLaranja();			
 		preencheAmarelo();			
 		preencheVerde();			
-	}				
+	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesCriancaDifLoc.drl";
+	}
 					
 	@Override				
 	protected void preencheVermelho() {				

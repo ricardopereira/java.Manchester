@@ -11,7 +11,12 @@ public class AreaCefaleia extends Area {
 		preencheLaranja();			
 		preencheAmarelo();			
 		preencheVerde();			
-	}				
+	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesCefaleia.drl";
+	}
 					
 	@Override				
 	protected void preencheVermelho() {				

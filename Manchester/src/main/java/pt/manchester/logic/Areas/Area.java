@@ -25,6 +25,8 @@ public abstract class Area {
 		this.escalaActual = escalaActual;
 	}
 	
+	public abstract String getRulesFile();
+	
 	protected abstract void preencheVermelho();
 	protected abstract void preencheLaranja();
 	protected abstract void preencheAmarelo();

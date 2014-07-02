@@ -11,7 +11,12 @@ public class AreaDiabetes extends Area {
 		preencheLaranja();			
 		preencheAmarelo();			
 		preencheVerde();			
-	}				
+	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesDiabetes.drl";
+	}
 					
 	@Override				
 	protected void preencheVermelho() {				

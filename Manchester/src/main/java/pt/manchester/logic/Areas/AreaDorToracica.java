@@ -11,7 +11,12 @@ public class AreaDorToracica extends Area {
 		preencheLaranja();			
 		preencheAmarelo();			
 		preencheVerde();
-	}				
+	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesDorToracica.drl";
+	}
 					
 	@Override				
 	protected void preencheVermelho() {				

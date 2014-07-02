@@ -11,7 +11,12 @@ public class AreaAgressao extends Area {
 		preencheLaranja();
 		preencheAmarelo();
 		preencheVerde();
-	}	
+	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesAgressao.drl";
+	}
 		
 	@Override	
 	protected void preencheVermelho() {	

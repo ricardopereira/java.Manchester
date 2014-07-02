@@ -12,6 +12,11 @@ public class AreaAsma extends Area {
 		preencheAmarelo();
 		preencheVerde();
 	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesAsma.drl";
+	}
 
 	@Override
 	protected void preencheVermelho() {

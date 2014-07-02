@@ -11,8 +11,13 @@ public class AreaDiarreia extends Area {
 		preencheLaranja();			
 		preencheAmarelo();			
 		preencheVerde();			
-	}				
-					
+	}
+
+	@Override
+	public String getRulesFile() {
+		return "RulesDiarreia.drl";
+	}
+	
 	@Override				
 	protected void preencheVermelho() {				
 		ArrayList<String> opcoes = new ArrayList<>();	

@@ -12,6 +12,11 @@ public class AreaDorCervical extends Area {
 		preencheAmarelo();
 		preencheVerde();
 	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesDorCervical.drl";
+	}
 
 	@Override
 	protected void preencheVermelho() {

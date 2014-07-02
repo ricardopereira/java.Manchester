@@ -11,7 +11,12 @@ public class AreaDorTesticular extends Area {
 		preencheLaranja();			
 		preencheAmarelo();			
 		preencheVerde();			
-	}				
+	}
+	
+	@Override
+	public String getRulesFile() {
+		return "RulesDorTesticular.drl";
+	}
 					
 	@Override				
 	protected void preencheVermelho() {				
