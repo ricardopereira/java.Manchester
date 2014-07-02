@@ -58,7 +58,6 @@ public class AreaAgressao extends Area {
 		opcoes.add("Edema");
 		opcoes.add("Deformação");
 
-		
 		setOpcoesVerde(opcoes);
 	}	
 }		

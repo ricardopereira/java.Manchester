@@ -12,7 +12,7 @@ import org.drools.logger.KnowledgeRuntimeLogger;
 import org.drools.logger.KnowledgeRuntimeLoggerFactory;
 import org.drools.runtime.StatefulKnowledgeSession;
 
-import pt.manchester.logic.Areas.AreaAsma;
+import pt.manchester.logic.Areas.*;
 
 /**
  * This is a sample class to launch a rule.
@@ -26,7 +26,7 @@ public class DroolsTest {
             StatefulKnowledgeSession ksession = kbase.newStatefulKnowledgeSession();
             KnowledgeRuntimeLogger logger = KnowledgeRuntimeLoggerFactory.newFileLogger(ksession, "test");
 
-            AreaAsma actual = new AreaAsma();
+            Area actual = new AreaDorLombar();
             ksession.insert(actual);
             
             ksession.fireAllRules();
@@ -42,6 +42,7 @@ public class DroolsTest {
         // Lista de regras/áreas
         kbuilder.add(ResourceFactory.newClassPathResource("Global.drl"), ResourceType.DRL);
         kbuilder.add(ResourceFactory.newClassPathResource("RulesAsma.drl"), ResourceType.DRL);
+        kbuilder.add(ResourceFactory.newClassPathResource("RulesDorLombar.drl"), ResourceType.DRL);
         
         KnowledgeBuilderErrors errors = kbuilder.getErrors();
         if (errors.size() > 0) {

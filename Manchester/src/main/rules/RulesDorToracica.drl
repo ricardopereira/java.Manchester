@@ -1,0 +1,74 @@
+package RuleDorToracica
+
+import pt.manchester.ui.text.*;
+import pt.manchester.logic.*;
+import pt.manchester.logic.Areas.*;
+
+rule "Rule DorToracica - Inicial/Vermelho"
+    when
+        area : AreaDorToracica(escalaActual == EscalaTriagem.etSemEscala);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+		if (opcao == opcaoNenhum)
+		{
+            area.setEscalaActual(EscalaTriagem.etLaranja);
+            update(area);
+        }
+		else
+		{
+            area.setEscalaActual(EscalaTriagem.etVermelho);
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule DorToracica - Laranja"
+    when
+        area : AreaDorToracica(escalaActual == EscalaTriagem.etLaranja);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etAmarelo);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule DorToracica - Amarelo"
+    when
+        area : AreaDorToracica(escalaActual == EscalaTriagem.etAmarelo);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etVerde);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule DorToracica - Verde"
+    when
+        area : AreaDorToracica(escalaActual == EscalaTriagem.etVerde);
+    then
+	    insert(new Resultado(area));
+	    retract(area);
+end
