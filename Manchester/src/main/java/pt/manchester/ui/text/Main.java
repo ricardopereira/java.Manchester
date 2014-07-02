@@ -54,6 +54,11 @@ public class Main {
 		listAreas.add(AreaDorLombar.class);
 		listAreas.add(AreaDorTesticular.class);
 		listAreas.add(AreaDorToracica.class);
+		listAreas.add(AreaEmbriaguezAparente.class);
+		listAreas.add(AreaFeridas.class);
+		listAreas.add(AreaGrandeTraumatismo.class);
+		listAreas.add(AreaGravidez.class);
+		listAreas.add(AreaHemorragiaGI.class);
 	}
 	
 	public static void showAreas() {
