@@ -2,9 +2,9 @@ package pt.manchester.logic.Areas;
 					
 import java.util.ArrayList;					
 					
-public class AreaMordedurasPicadas extends Area { 					
+public class AreaPaisPreocupados extends Area { 					
 					
-	public AreaMordedurasPicadas() { 				
+	public AreaPaisPreocupados() { 				
 		super();			
 					
 		preencheVermelho();			
@@ -15,7 +15,7 @@ public class AreaMordedurasPicadas extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesMordedurasPicadas.drl";
+		return "RulesPaisPreocupados.drl";
 	}
 					
 	@Override				
@@ -24,8 +24,7 @@ public class AreaMordedurasPicadas extends Area {
 							
 		opcoes.add("Compromisso da via aérea");
 		opcoes.add("Respiração ineficaz");
-		opcoes.add("Hemorragia exsanguinante");
-		opcoes.add("Estridor");
+		opcoes.add("Criança não reactiva");
 		opcoes.add("Choque");
 					
 		setOpcoesVermelhas(opcoes);			
@@ -35,13 +34,14 @@ public class AreaMordedurasPicadas extends Area {
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
+		opcoes.add("Prostrado");			
 		opcoes.add("Dor severa");			
-		opcoes.add("História significativa de alergia");			
-		opcoes.add("Dispneia aguda");
-		opcoes.add("Broncospasmo");
-		opcoes.add("Grande hemorragia incontrolável");
-		opcoes.add("Edema da lingua");
-		opcoes.add("Edema da face");
+		opcoes.add("Só responde à voz ou à dor");
+		opcoes.add("Sem resposta aos estímulos dos pais");
+		opcoes.add("História de sobredosagem ou envenamento");
+		opcoes.add("Erupção cutânea desconhecida");
+		opcoes.add("Púrpura");
+		opcoes.add("Criança quente");
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -51,8 +51,11 @@ public class AreaMordedurasPicadas extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
 		opcoes.add("Dor moderada");
-		opcoes.add("Pequena hemorragia incontrolável");
-		opcoes.add("Exantema eritematoso ou bulhoso");
+		opcoes.add("Choro prolongado ininterrupto");
+		opcoes.add("Inconsolável pelos pais");
+		opcoes.add("História inapropriada");
+		opcoes.add("Não urina");
+		opcoes.add("Não se alimenta");
 					
 		setOpcoesAmarelo(opcoes);
 	}				
@@ -62,8 +65,8 @@ public class AreaMordedurasPicadas extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();
 								
 		opcoes.add("Dor");
-		opcoes.add("Inflamação local");
-		opcoes.add("Infecção local");
+		opcoes.add("Sub-Febril(Febrícula)");
+		opcoes.add("Comportamento estranho");
 		opcoes.add("Problema Recente");
 					
 		setOpcoesVerde(opcoes);			

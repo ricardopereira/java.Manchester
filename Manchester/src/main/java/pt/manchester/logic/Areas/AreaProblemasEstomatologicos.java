@@ -2,9 +2,9 @@ package pt.manchester.logic.Areas;
 					
 import java.util.ArrayList;					
 					
-public class AreaMordedurasPicadas extends Area { 					
+public class AreaProblemasEstomatologicos extends Area { 					
 					
-	public AreaMordedurasPicadas() { 				
+	public AreaProblemasEstomatologicos() { 				
 		super();			
 					
 		preencheVermelho();			
@@ -15,7 +15,7 @@ public class AreaMordedurasPicadas extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesMordedurasPicadas.drl";
+		return "RulesProblemasEstomatologicos.drl";
 	}
 					
 	@Override				
@@ -24,8 +24,6 @@ public class AreaMordedurasPicadas extends Area {
 							
 		opcoes.add("Compromisso da via aérea");
 		opcoes.add("Respiração ineficaz");
-		opcoes.add("Hemorragia exsanguinante");
-		opcoes.add("Estridor");
 		opcoes.add("Choque");
 					
 		setOpcoesVermelhas(opcoes);			
@@ -34,14 +32,11 @@ public class AreaMordedurasPicadas extends Area {
 	@Override				
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
-					
+							
 		opcoes.add("Dor severa");			
-		opcoes.add("História significativa de alergia");			
-		opcoes.add("Dispneia aguda");
-		opcoes.add("Broncospasmo");
 		opcoes.add("Grande hemorragia incontrolável");
-		opcoes.add("Edema da lingua");
-		opcoes.add("Edema da face");
+		opcoes.add("Criança quente");
+		opcoes.add("Muito quente");
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -52,7 +47,8 @@ public class AreaMordedurasPicadas extends Area {
 					
 		opcoes.add("Dor moderada");
 		opcoes.add("Pequena hemorragia incontrolável");
-		opcoes.add("Exantema eritematoso ou bulhoso");
+		opcoes.add("Quente");
+		opcoes.add("Avulsão dentária recente");
 					
 		setOpcoesAmarelo(opcoes);
 	}				
@@ -62,8 +58,8 @@ public class AreaMordedurasPicadas extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();
 								
 		opcoes.add("Dor");
-		opcoes.add("Inflamação local");
-		opcoes.add("Infecção local");
+		opcoes.add("Sub-Febril(Febrícula)");
+		opcoes.add("Edema da face");
 		opcoes.add("Problema Recente");
 					
 		setOpcoesVerde(opcoes);			
