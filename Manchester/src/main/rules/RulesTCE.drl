@@ -1,0 +1,74 @@
+package RuleTCE
+
+import pt.manchester.ui.text.*;
+import pt.manchester.logic.*;
+import pt.manchester.logic.Areas.*;
+
+rule "Rule TCE - Inicial/Vermelho"
+    when
+        area : AreaTCE(escalaActual == EscalaTriagem.etSemEscala);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+		if (opcao == opcaoNenhum)
+		{
+            area.setEscalaActual(EscalaTriagem.etLaranja);
+            update(area);
+        }
+		else
+		{
+            area.setEscalaActual(EscalaTriagem.etVermelho);
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule TCE - Laranja"
+    when
+        area : AreaTCE(escalaActual == EscalaTriagem.etLaranja);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etAmarelo);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule TCE - Amarelo"
+    when
+        area : AreaTCE(escalaActual == EscalaTriagem.etAmarelo);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etVerde);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule TCE - Verde"
+    when
+        area : AreaTCE(escalaActual == EscalaTriagem.etVerde);
+    then
+	    insert(new Resultado(area));
+	    retract(area);
+end

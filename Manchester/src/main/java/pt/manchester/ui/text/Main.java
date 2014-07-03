@@ -75,7 +75,14 @@ public class Main {
 		listAreas.add(AreaProblemasOftalmologicos.class);	
 		listAreas.add(AreaProblemasOuvidos.class);
 		listAreas.add(AreaProblemasUrinarios.class);
-		listAreas.add(AreaQueda.class);		
+		listAreas.add(AreaQueda.class);
+		listAreas.add(AreaQueimaduraProfSup.class);
+		listAreas.add(AreaSobredosagemEnvenenamento.class);
+		listAreas.add(AreaTCE.class);
+		listAreas.add(AreaVomitos.class);
+		listAreas.add(AreaBebeChora.class);
+		listAreas.add(AreaComportamentoEstranho.class);	
+		
 	}
 	
 	public static void showAreas() {

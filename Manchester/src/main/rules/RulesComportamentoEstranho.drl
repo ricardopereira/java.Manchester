@@ -1,0 +1,66 @@
+package RuleComportamentoEstranho
+
+import pt.manchester.ui.text.*;
+import pt.manchester.logic.*;
+import pt.manchester.logic.Areas.*;
+
+rule "Rule ComportamentoEstranho - Inicial/Vermelho"
+    when
+        area : AreaComportamentoEstranho(escalaActual == EscalaTriagem.etSemEscala);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+		if (opcao == opcaoNenhum)
+		{
+            area.setEscalaActual(EscalaTriagem.etLaranja);
+            update(area);
+        }
+		else
+		{
+            area.setEscalaActual(EscalaTriagem.etVermelho);
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule ComportamentoEstranho - Laranja"
+    when
+        area : AreaComportamentoEstranho(escalaActual == EscalaTriagem.etLaranja);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etAmarelo);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule ComportamentoEstranho - Amarelo"
+    when
+        area : AreaComportamentoEstranho(escalaActual == EscalaTriagem.etAmarelo);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        insert(new Resultado(area));
+        retract(area);
+end
+
+rule "Rule ComportamentoEstranho - Verde"
+    when
+        area : AreaComportamentoEstranho(escalaActual == EscalaTriagem.etVerde);
+    then
+	    insert(new Resultado(area));
+	    retract(area);
+end
