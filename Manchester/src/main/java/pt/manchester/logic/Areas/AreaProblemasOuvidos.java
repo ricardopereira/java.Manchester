@@ -2,9 +2,9 @@ package pt.manchester.logic.Areas;
 					
 import java.util.ArrayList;					
 					
-public class AreaInfecLocaisAbcessos extends Area { 					
+public class AreaProblemasOuvidos extends Area { 					
 					
-	public AreaInfecLocaisAbcessos() { 				
+	public AreaProblemasOuvidos() { 				
 		super();			
 					
 		preencheVermelho();			
@@ -15,7 +15,7 @@ public class AreaInfecLocaisAbcessos extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesAreaInfecLocaisAbcessos.drl";
+		return "RulesProblemasOuvidos.drl";
 	}
 					
 	@Override				
@@ -32,10 +32,10 @@ public class AreaInfecLocaisAbcessos extends Area {
 	@Override				
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
-					
+							
 		opcoes.add("Dor severa");			
-		opcoes.add("Enfisema subcutâneo");			
-		opcoes.add("Compromisso vascular");
+		opcoes.add("Grande hemorragia incontrolável");
+		opcoes.add("Alteração do estado de consciência");
 		opcoes.add("Criança quente");
 		opcoes.add("Adulto muito quente");
 					
@@ -46,9 +46,12 @@ public class AreaInfecLocaisAbcessos extends Area {
 	protected void preencheAmarelo() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("Dor moderada");
-		opcoes.add("Dor nas articulações em movimento");
-		opcoes.add("Articulação quente");
+		opcoes.add("Dor moderada");		
+		opcoes.add("História de T.C.E.");		
+		opcoes.add("História inapropriada");
+		opcoes.add("Pequena hemorragia incontrolável");
+		opcoes.add("Hematoma auricular");
+		opcoes.add("Vertigens");
 		opcoes.add("Quente");
 					
 		setOpcoesAmarelo(opcoes);
@@ -57,10 +60,11 @@ public class AreaInfecLocaisAbcessos extends Area {
 	@Override				
 	protected void preencheVerde() {
 		ArrayList<String> opcoes = new ArrayList<>();
-					
-		opcoes.add("Sub-Febril(Febrícula)");	
+								
 		opcoes.add("Dor");
-		opcoes.add("Problema Recente");
+		opcoes.add("Sub-Febril(Febrícula)");
+		opcoes.add("Perda aguda de audição");
+		opcoes.add("Problema recente");
 					
 		setOpcoesVerde(opcoes);			
 	}				

@@ -69,7 +69,13 @@ public class Main {
 		listAreas.add(AreaInfecLocaisAbcessos.class);
 		listAreas.add(AreaMordedurasPicadas.class);
 		listAreas.add(AreaPaisPreocupados.class);
-		listAreas.add(AreaProblemasEstomatologicos.class);				
+		listAreas.add(AreaProblemasEstomatologicos.class);
+		listAreas.add(AreaProblemasNasais.class);
+		listAreas.add(AreaProblemasMembros.class);
+		listAreas.add(AreaProblemasOftalmologicos.class);	
+		listAreas.add(AreaProblemasOuvidos.class);
+		listAreas.add(AreaProblemasUrinarios.class);
+		listAreas.add(AreaQueda.class);		
 	}
 	
 	public static void showAreas() {

@@ -2,9 +2,9 @@ package pt.manchester.logic.Areas;
 					
 import java.util.ArrayList;					
 					
-public class AreaInfecLocaisAbcessos extends Area { 					
+public class AreaProblemasOftalmologicos extends Area { 					
 					
-	public AreaInfecLocaisAbcessos() { 				
+	public AreaProblemasOftalmologicos() { 				
 		super();			
 					
 		preencheVermelho();			
@@ -15,16 +15,14 @@ public class AreaInfecLocaisAbcessos extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesAreaInfecLocaisAbcessos.drl";
+		return "RulesProblemasOftalmologicos.drl";
 	}
 					
 	@Override				
 	protected void preencheVermelho() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 							
-		opcoes.add("Compromisso da via aérea");
-		opcoes.add("Respiração ineficaz");
-		opcoes.add("Choque");
+		opcoes.add("Lesão ocular química");
 					
 		setOpcoesVermelhas(opcoes);			
 	}				
@@ -32,12 +30,10 @@ public class AreaInfecLocaisAbcessos extends Area {
 	@Override				
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
-					
+							
 		opcoes.add("Dor severa");			
-		opcoes.add("Enfisema subcutâneo");			
-		opcoes.add("Compromisso vascular");
-		opcoes.add("Criança quente");
-		opcoes.add("Adulto muito quente");
+		opcoes.add("Traumatismo ocular penetrante");
+		opcoes.add("Perda total súbita de visão");
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -46,10 +42,9 @@ public class AreaInfecLocaisAbcessos extends Area {
 	protected void preencheAmarelo() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("Dor moderada");
-		opcoes.add("Dor nas articulações em movimento");
-		opcoes.add("Articulação quente");
-		opcoes.add("Quente");
+		opcoes.add("Dor moderada");		
+		opcoes.add("Acuidade visual reduzida");		
+		opcoes.add("História inapropriada");
 					
 		setOpcoesAmarelo(opcoes);
 	}				
@@ -57,9 +52,9 @@ public class AreaInfecLocaisAbcessos extends Area {
 	@Override				
 	protected void preencheVerde() {
 		ArrayList<String> opcoes = new ArrayList<>();
-					
-		opcoes.add("Sub-Febril(Febrícula)");	
+								
 		opcoes.add("Dor");
+		opcoes.add("Olho vermelho");
 		opcoes.add("Problema Recente");
 					
 		setOpcoesVerde(opcoes);			

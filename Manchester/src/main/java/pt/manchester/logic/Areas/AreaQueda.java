@@ -2,9 +2,9 @@ package pt.manchester.logic.Areas;
 					
 import java.util.ArrayList;					
 					
-public class AreaInfecLocaisAbcessos extends Area { 					
+public class AreaQueda extends Area { 					
 					
-	public AreaInfecLocaisAbcessos() { 				
+	public AreaQueda() { 				
 		super();			
 					
 		preencheVermelho();			
@@ -15,7 +15,7 @@ public class AreaInfecLocaisAbcessos extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesAreaInfecLocaisAbcessos.drl";
+		return "RulesQueda.drl";
 	}
 					
 	@Override				
@@ -24,6 +24,8 @@ public class AreaInfecLocaisAbcessos extends Area {
 							
 		opcoes.add("Compromisso da via aérea");
 		opcoes.add("Respiração ineficaz");
+		opcoes.add("Convulsão actual");
+		opcoes.add("Hipoglicemia");
 		opcoes.add("Choque");
 					
 		setOpcoesVermelhas(opcoes);			
@@ -32,12 +34,15 @@ public class AreaInfecLocaisAbcessos extends Area {
 	@Override				
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
-					
-		opcoes.add("Dor severa");			
-		opcoes.add("Enfisema subcutâneo");			
+							
+		opcoes.add("Dor severa");
+		opcoes.add("Mecanismo de lesão");
+		opcoes.add("História significativa de incidente");
+		opcoes.add("Pulso anormal");
+		opcoes.add("Grande hemorragia incontrolável");
+		opcoes.add("Alteração de estado de consciência");
+		opcoes.add("Hipotermia");
 		opcoes.add("Compromisso vascular");
-		opcoes.add("Criança quente");
-		opcoes.add("Adulto muito quente");
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -46,10 +51,14 @@ public class AreaInfecLocaisAbcessos extends Area {
 	protected void preencheAmarelo() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
-		opcoes.add("Dor moderada");
-		opcoes.add("Dor nas articulações em movimento");
-		opcoes.add("Articulação quente");
-		opcoes.add("Quente");
+		opcoes.add("Dor moderada");		
+		opcoes.add("História inapropriada");		
+		opcoes.add("Pequena hemorragia incontrolável");
+		opcoes.add("História de perda de consciência");
+		opcoes.add("Sinais neurológicos focais");
+		opcoes.add("Novos sintomas e/ou sinais neurológicos");	
+		opcoes.add("Deformação grosseira");
+		opcoes.add("Fractura exposta");
 					
 		setOpcoesAmarelo(opcoes);
 	}				
@@ -57,10 +66,11 @@ public class AreaInfecLocaisAbcessos extends Area {
 	@Override				
 	protected void preencheVerde() {
 		ArrayList<String> opcoes = new ArrayList<>();
-					
-		opcoes.add("Sub-Febril(Febrícula)");	
+								
 		opcoes.add("Dor");
-		opcoes.add("Problema Recente");
+		opcoes.add("Deformação");
+		opcoes.add("Edema");
+		opcoes.add("Problema recente");
 					
 		setOpcoesVerde(opcoes);			
 	}				

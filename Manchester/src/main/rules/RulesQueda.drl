@@ -1,0 +1,74 @@
+package RuleQueda
+
+import pt.manchester.ui.text.*;
+import pt.manchester.logic.*;
+import pt.manchester.logic.Areas.*;
+
+rule "Rule Queda - Inicial/Vermelho"
+    when
+        area : AreaQueda(escalaActual == EscalaTriagem.etSemEscala);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+		if (opcao == opcaoNenhum)
+		{
+            area.setEscalaActual(EscalaTriagem.etLaranja);
+            update(area);
+        }
+		else
+		{
+            area.setEscalaActual(EscalaTriagem.etVermelho);
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule Queda - Laranja"
+    when
+        area : AreaQueda(escalaActual == EscalaTriagem.etLaranja);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etAmarelo);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule Queda - Amarelo"
+    when
+        area : AreaQueda(escalaActual == EscalaTriagem.etAmarelo);
+    then
+        Comandos comandos = new Comandos(area);
+        int opcao = comandos.showOpcoes();
+        int opcaoNenhum = comandos.getOpcoesCount();
+
+        if (opcao == opcaoNenhum)
+        {
+            area.setEscalaActual(EscalaTriagem.etVerde);
+            update(area);
+        }
+        else
+        {
+            insert(new Resultado(area));
+            retract(area);
+        }
+end
+
+rule "Rule Queda - Verde"
+    when
+        area : AreaQueda(escalaActual == EscalaTriagem.etVerde);
+    then
+	    insert(new Resultado(area));
+	    retract(area);
+end

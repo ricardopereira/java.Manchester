@@ -2,9 +2,9 @@ package pt.manchester.logic.Areas;
 					
 import java.util.ArrayList;					
 					
-public class AreaInfecLocaisAbcessos extends Area { 					
+public class AreaProblemasNasais extends Area { 					
 					
-	public AreaInfecLocaisAbcessos() { 				
+	public AreaProblemasNasais() { 				
 		super();			
 					
 		preencheVermelho();			
@@ -15,7 +15,7 @@ public class AreaInfecLocaisAbcessos extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesAreaInfecLocaisAbcessos.drl";
+		return "RulesProblemasNasais.drl";
 	}
 					
 	@Override				
@@ -24,6 +24,7 @@ public class AreaInfecLocaisAbcessos extends Area {
 							
 		opcoes.add("Compromisso da via aérea");
 		opcoes.add("Respiração ineficaz");
+		opcoes.add("Hemorragia exsanguinante");
 		opcoes.add("Choque");
 					
 		setOpcoesVermelhas(opcoes);			
@@ -32,12 +33,10 @@ public class AreaInfecLocaisAbcessos extends Area {
 	@Override				
 	protected void preencheLaranja() {				
 		ArrayList<String> opcoes = new ArrayList<>();			
-					
+							
 		opcoes.add("Dor severa");			
-		opcoes.add("Enfisema subcutâneo");			
-		opcoes.add("Compromisso vascular");
-		opcoes.add("Criança quente");
-		opcoes.add("Adulto muito quente");
+		opcoes.add("Grande hemorragia incontrolável");
+		opcoes.add("Alteração do estado de consciência");
 					
 		setOpcoesLaranja(opcoes);			
 	}				
@@ -47,9 +46,10 @@ public class AreaInfecLocaisAbcessos extends Area {
 		ArrayList<String> opcoes = new ArrayList<>();			
 					
 		opcoes.add("Dor moderada");
-		opcoes.add("Dor nas articulações em movimento");
-		opcoes.add("Articulação quente");
-		opcoes.add("Quente");
+		opcoes.add("História significativa");
+		opcoes.add("História inapropriada");
+		opcoes.add("Pequena hemorragia incontrolável");		
+		opcoes.add("Deformação grosseira");
 					
 		setOpcoesAmarelo(opcoes);
 	}				
@@ -57,9 +57,10 @@ public class AreaInfecLocaisAbcessos extends Area {
 	@Override				
 	protected void preencheVerde() {
 		ArrayList<String> opcoes = new ArrayList<>();
-					
-		opcoes.add("Sub-Febril(Febrícula)");	
+								
 		opcoes.add("Dor");
+		opcoes.add("Deformação");
+		opcoes.add("Distúrbio hemorrágico");
 		opcoes.add("Problema Recente");
 					
 		setOpcoesVerde(opcoes);			
