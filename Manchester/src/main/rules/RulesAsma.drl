@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule Asma - Inicial/Vermelho"
+salience 100
     when
         area : AreaAsma(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule Asma - Inicial/Vermelho"
 end
 
 rule "Rule Asma - Laranja"
+salience 75
     when
         area : AreaAsma(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule Asma - Laranja"
 end
 
 rule "Rule Asma - Amarelo"
+salience 50
     when
         area : AreaAsma(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule Asma - Amarelo"
 end
 
 rule "Rule Asma - Verde"
+salience 25
     when
         area : AreaAsma(escalaActual == EscalaTriagem.etVerde);
     then

@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule ProblemasUrinarios - Inicial/Vermelho"
+salience 100
     when
         area : AreaProblemasUrinarios(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule ProblemasUrinarios - Inicial/Vermelho"
 end
 
 rule "Rule ProblemasUrinarios - Laranja"
+salience 75
     when
         area : AreaProblemasUrinarios(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule ProblemasUrinarios - Laranja"
 end
 
 rule "Rule ProblemasUrinarios - Amarelo"
+salience 50
     when
         area : AreaProblemasUrinarios(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule ProblemasUrinarios - Amarelo"
 end
 
 rule "Rule ProblemasUrinarios - Verde"
+salience 25
     when
         area : AreaProblemasUrinarios(escalaActual == EscalaTriagem.etVerde);
     then

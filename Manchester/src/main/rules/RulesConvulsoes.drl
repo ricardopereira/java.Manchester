@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule Convulsoes - Inicial/Vermelho"
+salience 100
     when
         area : AreaConvulsoes(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule Convulsoes - Inicial/Vermelho"
 end
 
 rule "Rule Convulsoes - Laranja"
+salience 75
     when
         area : AreaConvulsoes(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule Convulsoes - Laranja"
 end
 
 rule "Rule Convulsoes - Amarelo"
+salience 50
     when
         area : AreaConvulsoes(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule Convulsoes - Amarelo"
 end
 
 rule "Rule Convulsoes - Verde"
+salience 25
     when
         area : AreaConvulsoes(escalaActual == EscalaTriagem.etVerde);
     then

@@ -5,16 +5,38 @@ import java.util.ArrayList;
 import pt.manchester.logic.EscalaTriagem;
 
 public abstract class Area {
-	
 	private ArrayList<String> opcoesVermelhas = new ArrayList<>();
 	private ArrayList<String> opcoesLaranja = new ArrayList<>();
 	private ArrayList<String> opcoesAmarelo = new ArrayList<>();
 	private ArrayList<String> opcoesVerde = new ArrayList<>();
 	
+	//Testes
+	private Boolean inTest;	
+	private int ultimaOpcao;
+	//END Testes
+	
 	EscalaTriagem escalaActual;
 
 	public Area() {
 		escalaActual = EscalaTriagem.etSemEscala;
+		inTest = false;
+		ultimaOpcao = -1;
+	}
+	
+	public void setInTest(Boolean inTest) {
+		this.inTest = inTest;
+	}
+	
+	public Boolean getInTest() {
+		return inTest;
+	}
+	
+	public void setUltimaOpcao(int ultimaOpcao) {
+		this.ultimaOpcao = ultimaOpcao;
+	}
+	
+	public int getUltimaOpcao() {
+		return ultimaOpcao;
 	}
 	
 	public EscalaTriagem getEscalaActual() {

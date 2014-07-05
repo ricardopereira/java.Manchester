@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import pt.manchester.engine.MotorTriagem;
+import pt.manchester.logic.EscalaTriagem;
 import pt.manchester.logic.Areas.*;
 
 public class Main {
@@ -12,10 +13,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		// Teste
 		loadAreas();
 		showAreas();
-		
+
 		ArrayList<Area> areas = new ArrayList<>();
 		
         Scanner input = new Scanner(System.in);

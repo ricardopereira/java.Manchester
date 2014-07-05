@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule PaisPreocupados - Inicial/Vermelho"
+salience 100
     when
         area : AreaPaisPreocupados(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule PaisPreocupados - Inicial/Vermelho"
 end
 
 rule "Rule PaisPreocupados - Laranja"
+salience 75
     when
         area : AreaPaisPreocupados(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule PaisPreocupados - Laranja"
 end
 
 rule "Rule PaisPreocupados - Amarelo"
+salience 50
     when
         area : AreaPaisPreocupados(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule PaisPreocupados - Amarelo"
 end
 
 rule "Rule PaisPreocupados - Verde"
+salience 25
     when
         area : AreaPaisPreocupados(escalaActual == EscalaTriagem.etVerde);
     then

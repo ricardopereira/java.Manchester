@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule DoencaMental - Inicial/Vermelho"
+salience 100
     when
         area : AreaDoencaMental(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule DoencaMental - Inicial/Vermelho"
 end
 
 rule "Rule DoencaMental - Laranja"
+salience 75
     when
         area : AreaDoencaMental(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule DoencaMental - Laranja"
 end
 
 rule "Rule DoencaMental - Amarelo"
+salience 50
     when
         area : AreaDoencaMental(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -58,6 +61,7 @@ rule "Rule DoencaMental - Amarelo"
 end
 
 rule "Rule DoencaMental - Verde"
+salience 25
     when
         area : AreaDoencaHematologica(escalaActual == EscalaTriagem.etVerde);
     then

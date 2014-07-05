@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule EmbriaguezAparente - Inicial/Vermelho"
+salience 100
     when
         area : AreaEmbriaguezAparente(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule EmbriaguezAparente - Inicial/Vermelho"
 end
 
 rule "Rule EmbriaguezAparente - Laranja"
+salience 75
     when
         area : AreaEmbriaguezAparente(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule EmbriaguezAparente - Laranja"
 end
 
 rule "Rule EmbriaguezAparente - Amarelo"
+salience 50
     when
         area : AreaEmbriaguezAparente(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule EmbriaguezAparente - Amarelo"
 end
 
 rule "Rule EmbriaguezAparente - Verde"
+salience 25
     when
         area : AreaEmbriaguezAparente(escalaActual == EscalaTriagem.etVerde);
     then

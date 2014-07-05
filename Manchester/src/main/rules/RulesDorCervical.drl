@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule DorCervical - Inicial/Vermelho"
+salience 100
     when
         area : AreaDorCervical(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule DorCervical - Inicial/Vermelho"
 end
 
 rule "Rule DorCervical - Laranja"
+salience 75
     when
         area : AreaDorCervical(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule DorCervical - Laranja"
 end
 
 rule "Rule DorCervical - Amarelo"
+salience 50
     when
         area : AreaDorCervical(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule DorCervical - Amarelo"
 end
 
 rule "Rule DorCervical - Verde"
+salience 25
     when
         area : AreaDorCervical(escalaActual == EscalaTriagem.etVerde);
     then

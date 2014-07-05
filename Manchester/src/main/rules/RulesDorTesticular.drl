@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule DorTesticular - Inicial/Vermelho"
+salience 100
     when
         area : AreaDorTesticular(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule DorTesticular - Inicial/Vermelho"
 end
 
 rule "Rule DorTesticular - Laranja"
+salience 75
     when
         area : AreaDorTesticular(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule DorTesticular - Laranja"
 end
 
 rule "Rule DorTesticular - Amarelo"
+salience 50
     when
         area : AreaDorTesticular(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule DorTesticular - Amarelo"
 end
 
 rule "Rule DorTesticular - Verde"
+salience 25
     when
         area : AreaDorTesticular(escalaActual == EscalaTriagem.etVerde);
     then

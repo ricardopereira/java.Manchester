@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule ProblemasNasais - Inicial/Vermelho"
+salience 100
     when
         area : AreaProblemasNasais(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule ProblemasNasais - Inicial/Vermelho"
 end
 
 rule "Rule ProblemasNasais - Laranja"
+salience 75
     when
         area : AreaProblemasNasais(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule ProblemasNasais - Laranja"
 end
 
 rule "Rule ProblemasNasais - Amarelo"
+salience 50
     when
         area : AreaProblemasNasais(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule ProblemasNasais - Amarelo"
 end
 
 rule "Rule ProblemasNasais - Verde"
+salience 25
     when
         area : AreaProblemasNasais(escalaActual == EscalaTriagem.etVerde);
     then

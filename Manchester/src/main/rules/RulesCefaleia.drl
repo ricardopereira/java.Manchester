@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule Cefaleia - Inicial/Vermelho"
+salience 100
     when
         area : AreaCefaleia(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule Cefaleia - Inicial/Vermelho"
 end
 
 rule "Rule Cefaleia - Laranja"
+salience 75
     when
         area : AreaCefaleia(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule Cefaleia - Laranja"
 end
 
 rule "Rule Cefaleia - Amarelo"
+salience 50
     when
         area : AreaCefaleia(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule Cefaleia - Amarelo"
 end
 
 rule "Rule Cefaleia - Verde"
+salience 25
     when
         area : AreaCefaleia(escalaActual == EscalaTriagem.etVerde);
     then

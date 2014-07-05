@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule IndisposicaoAdulto - Inicial/Vermelho"
+salience 100
     when
         area : AreaIndisposicaoAdulto(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule IndisposicaoAdulto - Inicial/Vermelho"
 end
 
 rule "Rule IndisposicaoAdulto - Laranja"
+salience 75
     when
         area : AreaIndisposicaoAdulto(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule IndisposicaoAdulto - Laranja"
 end
 
 rule "Rule IndisposicaoAdulto - Amarelo"
+salience 50
     when
         area : AreaIndisposicaoAdulto(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule IndisposicaoAdulto - Amarelo"
 end
 
 rule "Rule IndisposicaoAdulto - Verde"
+salience 25
     when
         area : AreaIndisposicaoAdulto(escalaActual == EscalaTriagem.etVerde);
     then

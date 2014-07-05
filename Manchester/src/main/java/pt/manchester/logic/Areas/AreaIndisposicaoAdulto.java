@@ -15,7 +15,7 @@ public class AreaIndisposicaoAdulto extends Area {
 	
 	@Override
 	public String getRulesFile() {
-		return "RulesAreaIndisposicaoAdulto.drl";
+		return "RulesIndisposicaoAdulto.drl";
 	}
 					
 	@Override				

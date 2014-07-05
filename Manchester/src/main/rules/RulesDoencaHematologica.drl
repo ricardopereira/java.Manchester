@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule DoencaHematologica - Inicial/Vermelho"
+salience 100
     when
         area : AreaDoencaHematologica(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule DoencaHematologica - Inicial/Vermelho"
 end
 
 rule "Rule DoencaHematologica - Laranja"
+salience 75
     when
         area : AreaDoencaHematologica(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule DoencaHematologica - Laranja"
 end
 
 rule "Rule DoencaHematologica - Amarelo"
+salience 50
     when
         area : AreaDoencaHematologica(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule DoencaHematologica - Amarelo"
 end
 
 rule "Rule DoencaHematologica - Verde"
+salience 25
     when
         area : AreaDoencaHematologica(escalaActual == EscalaTriagem.etVerde);
     then

@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule ComportamentoEstranho - Inicial/Vermelho"
+salience 100
     when
         area : AreaComportamentoEstranho(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule ComportamentoEstranho - Inicial/Vermelho"
 end
 
 rule "Rule ComportamentoEstranho - Laranja"
+salience 75
     when
         area : AreaComportamentoEstranho(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule ComportamentoEstranho - Laranja"
 end
 
 rule "Rule ComportamentoEstranho - Amarelo"
+salience 50
     when
         area : AreaComportamentoEstranho(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -58,6 +61,7 @@ rule "Rule ComportamentoEstranho - Amarelo"
 end
 
 rule "Rule ComportamentoEstranho - Verde"
+salience 25
     when
         area : AreaComportamentoEstranho(escalaActual == EscalaTriagem.etVerde);
     then

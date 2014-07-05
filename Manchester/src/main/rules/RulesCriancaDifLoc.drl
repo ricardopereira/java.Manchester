@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule CriancaDifLoc - Inicial/Vermelho"
+salience 100
     when
         area : AreaCriancaDifLoc(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule CriancaDifLoc - Inicial/Vermelho"
 end
 
 rule "Rule CriancaDifLoc - Laranja"
+salience 75
     when
         area : AreaCriancaDifLoc(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule CriancaDifLoc - Laranja"
 end
 
 rule "Rule CriancaDifLoc - Amarelo"
+salience 50
     when
         area : AreaCriancaDifLoc(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule CriancaDifLoc - Amarelo"
 end
 
 rule "Rule CriancaDifLoc - Verde"
+salience 25
     when
         area : AreaCriancaDifLoc(escalaActual == EscalaTriagem.etVerde);
     then

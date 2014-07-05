@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule InfecLocaisAbcessos - Inicial/Vermelho"
+salience 100
     when
         area : AreaInfecLocaisAbcessos(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule InfecLocaisAbcessos - Inicial/Vermelho"
 end
 
 rule "Rule InfecLocaisAbcessos - Laranja"
+salience 75
     when
         area : AreaInfecLocaisAbcessos(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule InfecLocaisAbcessos - Laranja"
 end
 
 rule "Rule InfecLocaisAbcessos - Amarelo"
+salience 50
     when
         area : AreaInfecLocaisAbcessos(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule InfecLocaisAbcessos - Amarelo"
 end
 
 rule "Rule InfecLocaisAbcessos - Verde"
+salience 25
     when
         area : AreaInfecLocaisAbcessos(escalaActual == EscalaTriagem.etVerde);
     then

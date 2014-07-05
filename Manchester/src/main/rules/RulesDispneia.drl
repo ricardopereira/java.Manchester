@@ -5,6 +5,7 @@ import pt.manchester.logic.*;
 import pt.manchester.logic.Areas.*;
 
 rule "Rule Dispneia - Inicial/Vermelho"
+salience 100
     when
         area : AreaDispneia(escalaActual == EscalaTriagem.etSemEscala);
     then
@@ -26,6 +27,7 @@ rule "Rule Dispneia - Inicial/Vermelho"
 end
 
 rule "Rule Dispneia - Laranja"
+salience 75
     when
         area : AreaDispneia(escalaActual == EscalaTriagem.etLaranja);
     then
@@ -46,6 +48,7 @@ rule "Rule Dispneia - Laranja"
 end
 
 rule "Rule Dispneia - Amarelo"
+salience 50
     when
         area : AreaDispneia(escalaActual == EscalaTriagem.etAmarelo);
     then
@@ -66,6 +69,7 @@ rule "Rule Dispneia - Amarelo"
 end
 
 rule "Rule Dispneia - Verde"
+salience 25
     when
         area : AreaDispneia(escalaActual == EscalaTriagem.etVerde);
     then

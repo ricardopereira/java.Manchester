@@ -54,9 +54,11 @@ public class Comandos {
                 }
                 System.out.println(i+": "+Constantes.textNenhum);
                 
-                Scanner input = new Scanner(System.in);
-                // ToDo: validação de números
-        		return input.nextInt();        		
+
+            	Scanner input = new Scanner(System.in);
+            	// ToDo: validação de números
+            
+            	return input.nextInt();	       	
         	}
         }
         else
